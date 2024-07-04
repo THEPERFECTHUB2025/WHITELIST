@@ -1,4 +1,4 @@
-game:GetService('Players').LocalPlayer.Name = "FionaWolfgang"
+game:GetService('Players').LocalPlayer.Name = "THEPERFECTHUBV2"
 table.foreach(workspace:GetChildren(),function(a,b) if b.Name == "Anti Stuff" then b:Destroy() end end)
 wait(1)
 local version = "1.3 (6/26/2018)"
@@ -45,12 +45,13 @@ table.foreach(BL,function(a,b)
        idiotnoob()
        wait(3)
        table.foreach(workspace:GetChildren(),function(a,b) if b.Name == "Anti Stuff" then b:Destroy() end end)
-       user:Kick('Sorry, It appears you are blacklisted! '..name..'  DM theperfectexploiter3_76476 for appeal! {P.S. If youre blacklisted, you probably wont get Unblacklisted but hey, its worth a try lol')
+       user:Kick('Sorry, It appears you are blacklisted! '..name..'  DM <-[Tohru]->#6917 for appeal! {P.S. If youre blacklisted, you probably wont get Unblacklisted but hey, its worth a try lol')
        game.StarterGui:SetCore('SendNotification', {Title='Blacklisted'; Text='Player : '..game:GetService("Players").LocalPlayer.Name..' You are Blacklisted!'})
        end       
 end)
 local WL = {
-"Anonyme_s0l0"
+"THEPERFECTHUBV2",
+"Anonyme_s0l0",
 }
 table.foreach(WL,function(a,b)
     if name == tostring(b) and not BLACKLISTED then WHITELISTED=true end
@@ -112,179 +113,12 @@ user.CharacterAdded:connect(function(RIP)
     RIP.ChildAdded:connect(function(haha)
         if haha:IsA("SkateboardPlatform") then wait()
             haha:Destroy()
-            game.StarterGui:SetCore('SendNotification', {Title='AntiKick'; Text='Hey '..name..'! Someone attempted to kick you LOL'})
+            game.StarterGui:SetCore('SendNotification', {Title='AntiKick'; Text='LilBro '..name..'! Someone attempted to kick you LOL'})
             AntiKick=true
         end
     end)
 end)
 respawn()
-game.StarterGui:SetCore('SendNotification', {Title='AntiKick'; Text='Hey '..name..'! AntiKick ran successfully'})
+game.StarterGui:SetCore('SendNotification', {Title='AntiKick'; Text='LilBro '..name..'! AntiKick ran successfully'})
 a.Text = "Anti Kick Loaded"
-end
---FE Checker
-function FEChecker()
-FE = game:GetService("Workspace").FilteringEnabled
-if FE == true then
-game.StarterGui:SetCore('SendNotification', {Title='FilteringEnabled'; Text='Hey '..name..'! Filtering is enabled! D:'})
-a.Text = "Game is FilteringEnabled"
-else
-game.StarterGui:SetCore('SendNotification', {Title='FilteringEnabled'; Text='Hey '..name..'! Filtering is disabled! :D'})
-a.Text = "Game is FilteringDisabled"
-end
-end
---Anti Fling Script
-function AntiFling()
-function Part2()
-game:GetService("RunService").RenderStepped:connect(function()
-table.foreach(user.Character:GetDescendants(),function(a,b) if b:IsA("BodyForce") then game.StarterGui:SetCore('SendNotification', {Title='AntiFling'; Text='Hey '..name..'! Someone attempted to fling you!'}) end end)
-    table.foreach(user.Character:GetDescendants(), function(a,b) if b:IsA("BodyForce") then user.Character.Humanoid.Sit = false end end)
-end)
-end
-game:GetService("RunService").RenderStepped:connect(function()
-    table.foreach(user.Character:GetDescendants(),function(a,b) if b:IsA("BodyForce") then b:Destroy() end end)
-end)
-Part2()
-game.StarterGui:SetCore('SendNotification', {Title='AntiFling'; Text='Hey '..name..'! AntiFling ran successfully'})
-a.Text = "Anti Fling Loaded"
-end
---Anti Freeze Script
-function AntiFreeze()
-function Part3()
-game:GetService("RunService").RenderStepped:connect(function()
-table.foreach(user.Character:GetDescendants(),function(a,b) if b.Name == "Torso" and b.Anchored then 
-game.StarterGui:SetCore('SendNotification', {Title='AntiFreeze'; Text='Hey '..name..'! Someone tried to freeze you!'}) end end)
-end)
-end
-    game:GetService("RunService").RenderStepped:connect(function()
-        table.foreach(user.Character:GetDescendants(),function(a,b) if b:IsA("Part") and b.Anchored then b.Anchored = false end end)
-    end)
-Part3()
-game.StarterGui:SetCore('SendNotification', {Title='AntiFreeze'; Text='Hey '..name..'! AntiFreeze ran successfully'})
-a.Text = "Anti Freeze Loaded"
-end
---Anti Punish Script
-function AntiPunish()
-game:GetService("RunService").Stepped:connect(function()
-    if user.Character then
-        if user.Character.Parent~=workspace then
-            user.Character.Parent=workspace
-            game.StarterGui:SetCore('SendNotification', {Title='AntiPunish'; Text='Hey '..name..'! Someone tried to punish you! (or you died xd)'})
-        end
-    end
-end)
-game.StarterGui:SetCore('SendNotification', {Title='AntiPunish'; Text='Hey '..name..'! AntiPunish ran successfully'})
-a.Text = "Anti Punish Loaded"
-end
---Anti Punish Clone Deleter
-function CloneDelete()
-game:GetService("RunService").RenderStepped:connect(function()
-for i,v in pairs(workspace:GetChildren()) do
-    if v.Name==game:GetService("Players").LocalPlayer.Name then
-        if game:GetService("Players").LocalPlayer.Character~=v then
-            v:Destroy()
-            game.StarterGui:SetCore('SendNotification', {Title='CloneDeleter'; Text='Hey '..name..'! Clone Deletion was successful'})
- 
-        end
-    end
-end
-end)
-game.StarterGui:SetCore('SendNotification', {Title='CloneDeleter'; Text='Hey '..name..'! CloneDeleter ran successfully'})
-a.Text = "Clone deleter loaded"
-end
-wait(1)
-if WHITELISTED then
-print("Changelog (6/21/2018)")
-print("-Fixed Script and *most* errors*")
-print("-Fixed Whitelist")
-print("-Released Script")
-print("------------------------------------------------------------------------")
-print("Soon to be added")
-print("--Anti Kill")
-print("--Auto clone deletion (Anti Punish)")
-print("--Less lag")
-print("--Harder to crack (More and better obfuscation)")
-print("------------------------------------------------------------------------")
-print("Info")
-print("---Discord = [Certified Weeb]#6917, DM for problems/questions")
-print("---Script may not always work and/or cause you to crash")
-print("The script is reported to lag sometimes but it actually does not, it only appears to lag when running large scripts like OMNI GOD")
-print("------------------------------------------------------------------------")
-print("Changelog (6/22/2018)")
-print("-Added notifiers (missing ones for kick and crash")
-print("-Added Auto Clone deletion for antipunish")
-print("------------------------------------------------------------------------")
-print("Soon to be added")
-print("--Anti Kill")
-print("--Less lag")
-print("--Harder to crack (More and better obfuscation)")
-print("--Better Whitelist system")
-print("------------------------------------------------------------------------")
-print("Changelog (6/23/2018)")
-print("-Added notifer for kick (working on crash)")
-print("Started development on anti kill and less lag")
-print("Added variables to make future updates more easy and convenient")
-print("------------------------------------------------------------------------")
-print("Soon to be added")
-print("--Anti Kill")
-print("--Less lag")
-print("--Harder to crack (More and better obfuscation)")
-print("--Better Whitelist system")
-print("--GUI for configuration so you could choose what scripts to run and which to not")
-print("------------------------------------------------------------------------")
-print("Changelog (6/23/2018)")
-print("-Added notifer for kick (working on crash)")
-print("-Added a better method of seeing things (load)")
-print("-Slowed injecton time... Sorry ;C")
-print("------------------------------------------------------------------------")
-print("Soon to be added")
-print("--Anti Kill")
-print("--Less lag")
-print("--Harder to crack (More and better obfuscation)")
-print("--Better Whitelist system")
-print("--GUI for configuration so you could choose what scripts to run and which to not")
-print("------------------------------------------------------------------------")
-print("Changelog (6/26/2018)")
-print("-Added notifer for kick and crash")
-print("-Fucked you over if you're blacklisted")
-print("-Slowed injecton time... Sorry ;C")
-print("-Slightly fixed Anti crash")
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running Anti Crash, This version is bad. Wait at least 5 seconds after a crash")
-print("To see if it worked or not, it's really slow and bad and hecc sometimes doesn't even work")
-AntiCrash()
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running Antikick, this isn't the best anti kick in the world but it stops commonly used kicks")
-print("Such as IY, Rocky2u, TopK3k, you name it. If somehow you still get kicked, dont complain to me about it")
-print("It isn't state of the art")
-AntiKick()
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running FE Check, lol, nothing to say, it checks FE")
-FEChecker()
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running Anti Fling, shitty anti fling i made in like 5 mins, works but not against loop fling oh well")
-AntiFling()
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running Anti Freeze, Nothing to say about this, it works i guess lol, btw the notifier bugs a little")
-AntiFreeze()
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running Anti Punish, Works, only con is that when you die, you won't despawn lol")
-AntiPunish()
-wait(4)
-print("------------------------------------------------------------------------")
-print("Running Clone Deleter, For the anti punish, may cause some lag idk")
-CloneDelete()
-wait(1)
-game.StarterGui:SetCore('SendNotification', {Title='Changelogs'; Text='Click F9 on your keyboard then scroll up to view the changelogs!'})
-print("------------------------------------------------------------------------")
-print("Hope you enjoy the script! Thanks for buying!")
-print('You are running STUFF by <-[Tohru]->#6917 and Tristan#1673. Version: '..version..' ')
-wait(2)
-table.foreach(workspace:GetChildren(),function(a,b) if b.Name == "Anti Stuff" then b:Destroy() end end)
-warn("Script end...")
 end
